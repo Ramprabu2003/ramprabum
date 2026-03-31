@@ -1,0 +1,636 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ramprabu | Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+
+    <div class="cursor-dot" id="cursorDot"></div>
+    <div class="cursor-outline" id="cursorOutline"></div>
+
+    <div id="loader">
+        <div class="loader-inner">
+            <div class="loader-logo">
+                <img src="assets/images/logo.png" alt="Ramprabu logo" class="brand-logo loader-brand-logo">
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#home" aria-label="Ramprabu home">
+                <img src="assets/images/logo.png" alt="Ramprabu logo" class="brand-logo nav-brand-logo">
+            </a>
+            <div class="d-flex align-items-center gap-3 ms-auto">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fas fa-sun" id="themeIcon"></i>
+                </button>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="hamburger-icon"><span></span><span></span><span></span></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home"><span>01.</span> Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about"><span>02.</span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects"><span>03.</span> Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills"><span>04.</span> Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact"><span>05.</span> Contact</a></li>
+                    <li class="nav-item ms-2"><a href="assets/resume.pdf" target="_blank" class="btn-resume">Resume <i
+                                class="fas fa-download ms-1"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-section">
+        <canvas id="heroCanvas"></canvas>
+        <div class="hero-content container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-7 hero-text">
+                    <p class="hero-greeting">Hi there, I am</p>
+                    <h1 class="hero-name">Ramprabu<span class="accent-dot">.</span>M</h1>
+                    <h2 class="hero-tagline">
+                        I build <span class="typewriter" id="typewriter"></span><span class="cursor-blink">|</span>
+                    </h2>
+                    <p class="hero-desc">
+                        Aspiring Full Stack Web Developer and Data Analyst with internship experience in full-stack development,
+                        data analytics, and UI/UX design. I focus on building practical, user-friendly digital
+                        solutions.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-glow">Explore Work <i class="fas fa-arrow-right ms-2"></i></a>
+                        <a href="#contact" class="btn-glass ms-3">Let us Talk</a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://github.com/Ramprabu2003" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/ramprabu-m" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/ramprabu_2003?igsh=a3ltZ21yc2FwdjhwI" class="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                        <a href="mailto:ramprabum112@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+                    <div class="hero-avatar-wrap">
+                        <div class="avatar-ring ring-1"></div>
+                        <div class="avatar-ring ring-2"></div>
+                        <div class="avatar-ring ring-3"></div>
+                        <div class="avatar-img-wrap">
+                            <div class="avatar-placeholder"><i class="fas fa-user"></i></div>
+                        </div>
+                        <div class="floating-badge badge-html">HTML</div>
+                        <div class="floating-badge badge-css">CSS</div>
+                        <div class="floating-badge badge-js">JS</div>
+                        <div class="floating-badge badge-react">React</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <p>Scroll Down</p>
+        </div>
+    </section>
+
+    <section class="stats-bar">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-6 col-md-3 stat-item">
+                    <h3 class="stat-num" data-count="3">0</h3><span class="stat-plus">+</span>
+                    <p>Years Experience</p>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <h3 class="stat-num" data-count="25">0</h3><span class="stat-plus">+</span>
+                    <p>Projects Done</p>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <h3 class="stat-num" data-count="15">0</h3><span class="stat-plus">+</span>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="col-6 col-md-3 stat-item">
+                    <h3 class="stat-num" data-count="10">0</h3><span class="stat-plus">+</span>
+                    <p>Technologies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="row align-items-center g-5 mt-2">
+                <div class="col-lg-5">
+                    <div class="about-img-card">
+                        <div class="about-img-inner">
+                            <div class="about-avatar-lg"><i class="fas fa-user-tie"></i></div>
+                            <div class="about-dots"></div>
+                        </div>
+                        <div class="about-exp-badge">
+                            <span class="exp-num">3</span>
+                            <span class="exp-label">Internships<br>Completed</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <h3 class="about-name">I am <span class="gradient-text">Ramprabu M</span>, an Aspiring Full Stack Web Developer and Data Analyst</h3>
+                    <p class="about-bio">
+                        I completed M.Sc. Computer Science in 2026 and have practical internship exposure in full-stack
+                        web development, data analytics, and UI/UX design at TECHFORGE. I enjoy combining clean design,
+                        data-driven thinking, and modern web tools to build meaningful applications.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item"><i class="fas fa-user"></i>
+                            <div><span>Name</span><strong>Ramprabu M</strong></div>
+                        </div>
+                        <div class="info-item"><i class="fas fa-envelope"></i>
+                            <div><span>Email</span><strong>ramprabum112@gmail.com</strong></div>
+                        </div>
+                        <div class="info-item"><i class="fas fa-map-marker-alt"></i>
+                            <div><span>Location</span><strong>Salem, Tamil Nadu, India</strong></div>
+                        </div>
+                        <div class="info-item"><i class="fas fa-briefcase"></i>
+                            <div><span>Status</span><strong class="available-badge">Open to Opportunities</strong></div>
+                        </div>
+                    </div>
+                    <div class="about-services mt-4">
+                        <div class="service-pill"><i class="fas fa-laptop-code"></i> Full Stack Web Development</div>
+                        <div class="service-pill"><i class="fas fa-chart-bar"></i> Data Analytics</div>
+                        <div class="service-pill"><i class="fas fa-palette"></i> UI/UX Design</div>
+                        <div class="service-pill"><i class="fas fa-table"></i> Dashboard Reporting</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-pad projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="ai">AI Agents</button>
+                <button class="filter-btn" data-filter="data">Data Analysis</button>
+                <button class="filter-btn" data-filter="dashboard">Dashboards</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+            </div>
+            <div class="row g-4 mt-2" id="projectsGrid">
+                <div class="col-md-6 col-lg-4 project-item" data-category="ai">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-scale-balanced proj-icon"></i></div>
+                        <div class="proj-num">01</div>
+                        <h5 class="proj-title">Law AI Agents</h5>
+                        <p class="proj-desc">Legal assistant agents built with CrewAI and Python using OpenAI API integration.</p>
+                        <div class="proj-tags"><span>CrewAI</span><span>Python</span><span>OpenAI API</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="data">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-file-excel proj-icon"></i></div>
+                        <div class="proj-num">02</div>
+                        <h5 class="proj-title">Retail Superstore Profitability Analysis</h5>
+                        <p class="proj-desc">Sales performance and profitability analysis of a retail superstore using Excel dashboards and insights.</p>
+                        <div class="proj-tags"><span>Excel</span><span>Data Analysis</span><span>Business Insights</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="dashboard">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-chart-pie proj-icon"></i></div>
+                        <div class="proj-num">03</div>
+                        <h5 class="proj-title">Students Social Media Addiction Dashboard</h5>
+                        <p class="proj-desc">Interactive Looker Studio dashboard analyzing student social media addiction patterns and behavior trends.</p>
+                        <div class="proj-tags"><span>Looker Studio</span><span>Data Visualization</span><span>Reporting</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="dashboard">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-chart-line proj-icon"></i></div>
+                        <div class="proj-num">04</div>
+                        <h5 class="proj-title">Superstore Sales Dashboard</h5>
+                        <p class="proj-desc">Power BI dashboard for superstore sales KPIs, region trends, and category performance tracking.</p>
+                        <div class="proj-tags"><span>Power BI</span><span>DAX</span><span>Data Modeling</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="dashboard">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-globe proj-icon"></i></div>
+                        <div class="proj-num">05</div>
+                        <h5 class="proj-title">International Education Cost Trends</h5>
+                        <p class="proj-desc">Tableau project analyzing global trends in international education costs across countries and time.</p>
+                        <div class="proj-tags"><span>Tableau</span><span>Analytics</span><span>Global Data</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-notes-medical proj-icon"></i></div>
+                        <div class="proj-num">06</div>
+                        <h5 class="proj-title">Medical Static Page</h5>
+                        <p class="proj-desc">Responsive medical themed static website with clean layout and service-focused sections.</p>
+                        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>Bootstrap</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-qrcode proj-icon"></i></div>
+                        <div class="proj-num">07</div>
+                        <h5 class="proj-title">QR Code Generator Web App</h5>
+                        <p class="proj-desc">Simple web app to generate QR codes instantly from user input with responsive UI.</p>
+                        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-calculator proj-icon"></i></div>
+                        <div class="proj-num">08</div>
+                        <h5 class="proj-title">Simple Arithmetic Calculator</h5>
+                        <p class="proj-desc">Basic arithmetic calculator supporting addition, subtraction, multiplication, and division.</p>
+                        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-weight-scale proj-icon"></i></div>
+                        <div class="proj-num">09</div>
+                        <h5 class="proj-title">Simple BMI Calculator</h5>
+                        <p class="proj-desc">BMI calculator that takes height and weight inputs and classifies health range instantly.</p>
+                        <div class="proj-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 project-item" data-category="web">
+                    <div class="proj-card tilt-card">
+                        <div class="proj-card-glow"></div>
+                        <div class="proj-icon-wrap"><i class="fas fa-graduation-cap proj-icon"></i></div>
+                        <div class="proj-num">10</div>
+                        <h5 class="proj-title">AN INTEGRATED SAM-CAM FRAMWORK FOR OUTCOME BASED EDUCATION MONITORING AND ASSESSMENT</h5>
+                        <p class="proj-desc">An ERP-based full stack web application for outcome-based education monitoring and assessment, developed as a two-member team project using the MERN stack.</p>
+                        <div class="proj-tags"><span>MERN Stack</span><span>React</span><span>MongoDB Atlas</span><span>Express.js</span><span>Node.js</span></div>
+                        <div class="proj-links"><a href="#" class="proj-link"><i class="fas fa-external-link-alt"></i>
+                                Live</a><a href="#" class="proj-link"><i class="fab fa-github"></i> Code</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section-pad">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Expertise</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="row g-4 mt-2">
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#e34c26"><i class="fab fa-html5"></i></div>
+                        <span>HTML5</span>
+                        <div class="skill-level">
+                            <div style="width:95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#264de4"><i class="fab fa-css3-alt"></i></div>
+                        <span>CSS3</span>
+                        <div class="skill-level">
+                            <div style="width:92%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#f7df1e"><i class="fab fa-js-square"></i></div>
+                        <span>JavaScript</span>
+                        <div class="skill-level">
+                            <div style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#61dafb"><i class="fab fa-react"></i></div>
+                        <span>SQL</span>
+                        <div class="skill-level">
+                            <div style="width:82%"></div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#339933"><i class="fas fa-database"></i></div>
+                        <span>MySQL</span>
+                        <div class="skill-level">
+                            <div style="width:84%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#3776ab"><i class="fab fa-python"></i></div>
+                        <span>Python</span>
+                        <div class="skill-level">
+                            <div style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#47a248"><i class="fas fa-chart-pie"></i></div>
+                        <span>Looker Studio</span>
+                        <div class="skill-level">
+                            <div style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#336791"><i class="fas fa-chart-line"></i></div>
+                        <span>Power BI</span>
+                        <div class="skill-level">
+                            <div style="width:76%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#2496ed"><i class="fas fa-chart-area"></i></div>
+                        <span>Tableau</span>
+                        <div class="skill-level">
+                            <div style="width:74%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#f05032"><i class="fab fa-figma"></i></div>
+                        <span>Figma</span>
+                        <div class="skill-level">
+                            <div style="width:80%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#7952b3"><i class="fab fa-bootstrap"></i></div>
+                        <span>Bootstrap 5</span>
+                        <div class="skill-level">
+                            <div style="width:95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#34d399"><i class="fas fa-layer-group"></i></div>
+                        <span>MERN Stack (Hands-on)</span>
+                        <div class="skill-level">
+                            <div style="width:83%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#10a37f"><i class="fas fa-robot"></i></div>
+                        <span>ChatGPT</span>
+                        <div class="skill-level">
+                            <div style="width:88%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-4 col-lg-2">
+                    <div class="skill-card">
+                        <div class="skill-icon-wrap" style="--clr:#ff9900"><i class="fas fa-file-excel"></i></div>
+                        <span>MS Office (Word, PPT, Excel)</span>
+                        <div class="skill-level">
+                            <div style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="timeline" class="section-pad timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Journey</span>
+                <h2 class="section-title">Internships &amp; <span class="gradient-text">Education</span></h2>
+            </div>
+            <div class="timeline mt-4">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <h5>M.Sc. Computer Science</h5><span class="tl-badge">2024 &mdash; 2026</span>
+                        </div>
+                        <p class="tl-company"><i class="fas fa-graduation-cap me-1"></i> Government Arts College for Salem 7</p>
+                        <p class="tl-desc">Completed in 2026 with 74%. Built advanced computer science knowledge with
+                            strong practical implementation focus.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <h5>B.Sc. Computer Science</h5><span class="tl-badge">2021 &mdash; 2024</span>
+                        </div>
+                        <p class="tl-company"><i class="fas fa-graduation-cap me-1"></i> Thiruvalluvar Govt Arts College</p>
+                        <p class="tl-desc">Completed undergraduate degree with 74.22%. Strengthened foundation in programming,
+                            database systems, and software concepts.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <h5>Full Stack Web Development Internship</h5><span class="tl-badge">13/05/2025 &mdash; 06/06/2025</span>
+                        </div>
+                        <p class="tl-company"><i class="fas fa-building me-1"></i> TECHFORGE Company</p>
+                        <p class="tl-desc">Worked on web designing with HTML5, CSS3, JavaScript and Bootstrap 5. Built
+                            responsive UI components and practical frontend modules.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <h5>Data Analytics &amp; UI/UX Internships</h5><span class="tl-badge">2025</span>
+                        </div>
+                        <p class="tl-company"><i class="fas fa-building me-1"></i> TECHFORGE Company</p>
+                        <p class="tl-desc">Data Analytics: Excel, Looker Studio, Power BI, SQL, Python, Tableau.<br>
+                            UI/UX Design: Figma, Canva, graphics design and basic Photoshop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-pad contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Say Hello</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            </div>
+            <div class="row g-5 mt-2 align-items-start">
+                <div class="col-lg-5">
+                    <div class="contact-info-card">
+                        <p class="contact-intro">I am open to internship and entry-level opportunities in web
+                            development, data analytics, and UI/UX. Feel free to contact me for job opportunities.</p>
+                        <div class="contact-detail">
+                            <div class="cd-icon"><i class="fas fa-envelope"></i></div>
+                            <div><span>Email</span><strong>ramprabum112@gmail.com</strong></div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="cd-icon"><i class="fas fa-phone"></i></div>
+                            <div><span>Phone</span><strong>+91 9363082935</strong></div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="cd-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div><span>Location</span><strong>Salem, Tamil Nadu, India - 636139</strong></div>
+                        </div>
+                        <div class="contact-socials mt-4">
+                            <a href="https://github.com/Ramprabu2003" class="cs-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/ramprabu-m" class="cs-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://www.instagram.com/ramprabu_2003?igsh=a3ltZ21yc2FwdjhwI" class="cs-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                            <a href="mailto:ramprabum112@gmail.com" class="cs-link"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <form class="contact-form" id="contactForm" data-recipient-email="ramprabum112@gmail.com" enctype="multipart/form-data" novalidate>
+                        <input type="text" name="_honey" id="websiteTrap" autocomplete="off" tabindex="-1" style="position:absolute;left:-9999px;opacity:0;pointer-events:none;">
+                        <input type="hidden" id="formLoadedAt" value="">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-float"><input type="text" class="form-input" id="name" name="name"
+                                        placeholder=" " required><label for="name">Full Name</label><span
+                                        class="form-focus-line"></span></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-float"><input type="email" class="form-input" id="email" name="email"
+                                        placeholder=" " required><label for="email">Email Address</label><span
+                                        class="form-focus-line"></span></div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-float"><input type="tel" class="form-input" id="phone" name="phone"
+                                        inputmode="tel" autocomplete="tel" placeholder=" "><label for="phone">Phone Number</label><span
+                                        class="form-focus-line"></span></div>
+                                <small class="form-help-text">Example: +91 9876543210</small>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-float"><input type="text" class="form-input" id="companyWebsite" name="companyWebsite"
+                                        inputmode="url" autocomplete="url" placeholder=" "><label for="companyWebsite">Company Website (Optional)</label><span
+                                        class="form-focus-line"></span></div>
+                                <small class="form-help-text">Example: https://company.com</small>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-float"><input type="text" class="form-input" id="subject"
+                                        name="subject" placeholder=" " required><label
+                                        for="subject">Subject</label><span class="form-focus-line"></span></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-float"><textarea class="form-input" id="message" name="message"
+                                        rows="5" placeholder=" " required></textarea><label for="message">Your
+                                        Message</label><span class="form-focus-line"></span></div>
+                            </div>
+                            <div class="col-12">
+                                <div class="file-upload-wrap">
+                                    <label class="file-upload-label" for="attachment">Attachment (Optional)</label>
+                                    <input type="file" class="form-input" id="attachment" name="attachment"
+                                        accept=".pdf,.doc,.docx,.txt,.png,.jpg,.jpeg,.webp">
+                                    <small class="file-upload-help">Optional. Max file size: 5MB.</small>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <button type="submit" class="btn-send" id="sendBtn">
+                                    <span class="btn-text">Send Message <i class="fas fa-paper-plane ms-2"></i></span>
+                                    <span class="btn-loading d-none"><i
+                                            class="fas fa-spinner fa-spin me-2"></i>Sending...</span>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <iframe name="formSubmitFrame" id="formSubmitFrame" title="Form submit frame" style="display:none;"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-inner">
+                <a class="footer-brand" href="#home" aria-label="Ramprabu home">
+                    <img src="assets/images/logo.png" alt="Ramprabu logo" class="brand-logo footer-brand-logo">
+                </a>
+                <p class="footer-copy">&copy; 2026 Ramprabu M. Aspiring Full Stack Web Developer &amp; Data Analyst.</p>
+                <div class="footer-socials">
+                    <a href="https://github.com/Ramprabu2003" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/ramprabu-m" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/ramprabu_2003?igsh=a3ltZ21yc2FwdjhwI" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-gradient"></div>
+    </footer>
+
+    <button id="scrollTop" class="scroll-top-btn" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+    <div id="toastNotif" class="toast-notif"></div>
+
+    <div id="projModal" class="proj-modal-overlay" role="dialog" aria-modal="true" aria-hidden="true">
+        <div class="proj-modal-box">
+            <button class="proj-modal-close" id="projModalClose" aria-label="Close modal"><i
+                    class="fas fa-times"></i></button>
+            <div id="projModalContent"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
